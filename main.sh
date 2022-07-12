@@ -11,5 +11,5 @@ CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 #     item=$(printf "menu\n%s\n[cancel]" "$items_origin" | eval "$TMUX_FZF_BIN $TMUX_FZF_OPTIONS")
 # fi
 # [[ "$item" == "[cancel]" || -z "$item" ]] && exit
-item=$(echo "$CURRENT_DIR/scripts/pane" | sed -E 's/$/.sh/')
+item=$(echo "$CURRENT_DIR/scripts/window" | sed -E 's/$/.sh/')
 tmux run-shell -b "$item"
